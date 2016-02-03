@@ -1,0 +1,66 @@
+Child order count should show number of children if position or position group with more than one child
+
+Child order count should show number of grandchildren if position group with just one child
+
+---- BuySell
+
+BuySell should display blue B if quantity is sell
+
+BuySell should display yellow S if quantity is buy
+
+BuySell should display white - if netted quantity is 0
+
+---- Units
+
+****** Units should display with the same number of decimal places as the use input with *******
+
+Units should display blue if more buy than sell
+
+Units should display yellow if more sell than buy
+
+Units should display white if netted is 0
+
+----
+
+Amount should display openTradeAmountInTradingAccountCurrency with pound prefix if openTradeAmountInTradingAccountCurrency is above zero
+
+Amount should display dash if openTradeAmountInTradingAccountCurrency is zero
+
+----
+
+Conversion Rate should display revalOfferPrice if row is position group and profitLoss is less than zero
+
+Conversion Rate should display revalBidPrice if row is position group profitLoss is more than zero
+
+Position and trade rows should display nothing
+
+----
+
+Margin Rate should display marginRate if row is standard position or a position group with only a standard position child
+
+Margin Rate should display nothing for trade rows and GSLO positions
+
+---- Margin Column
+
+If there is neither margin nor prime margin the it should display nothing
+
+It should display the sum of the prime margin and margin if prime margin or margin is above zero
+
+---- ProfitLoss Column
+
+It should display profit loss of row
+
+---- StopLoss Column
+
+It should display the stop loss for trades that have a stop loss
+
+It should display the number of children that have stop losses for Position and Position Groups that have stop losses
+
+---- TakeProfit Column
+
+It should display the take profit for trades that have a take profit
+
+It should display the number of children that have take profits for Position and Position Groups that have take profits
+
+----
+

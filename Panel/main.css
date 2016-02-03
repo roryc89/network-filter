@@ -1,0 +1,32 @@
+/* Copyright 2013 The Chromium Authors. All rights reserved.
+ * Use of this source code is governed by a BSD-style license that can be
+ * found in the LICENSE file. */
+
+.newspaper {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+ol.newspaper {
+  border: 1px solid #69c;
+  font-size: 12px;
+  margin: 20px;
+  text-align: left;
+}
+
+ol.newspaper li {
+  border-top: 1px dashed #fff;
+  color: #669;
+  padding: 5px;
+  vertical-align: top;
+}
+
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+span.hl{
+  background-color:#FF9;
+}
