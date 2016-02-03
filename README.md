@@ -1,5 +1,5 @@
 # network-filter
-Network filter tab for chome devtools
+Network filter tab for chome devtools.
 
 ##  The problem:
 You're recieving a large number of network responses but you only want to to examine one.
@@ -10,9 +10,9 @@ Network filter adds a new devtools tab that allows you to filter network respons
 Time saved!
 
 ##  Installation:
-Download the zip of this repo
-Unzip it
-Drag and drop the folder onto your chrome extensions page (chrome://extensions)
+Download the zip of this repo.
+Unzip it.
+Drag and drop the folder onto your chrome extensions page (chrome://extensions).
 
 ##  Usage:
 Open chrome devtools and you will see a new tab called network filter.
