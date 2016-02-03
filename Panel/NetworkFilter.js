@@ -68,15 +68,13 @@
 
         entry.getContent(function (content, encoding) {
 
-          console.log('content: ', content);
-          console.log('encoding: ', encoding);
+
           entry.responseBody = content;
 
           harWithContent.push(entry);
-          console.log('harWithContent.length: ', harWithContent.length);
-          console.log('HarLog.entries.length: ', HarLog.entries.length);
+
           if (HarLog.entries.length >= harWithContent.length) {
-            console.log('len match, harWithContent: ', harWithContent);
+
             filterHar(harWithContent);
           }
         });
@@ -105,12 +103,6 @@
   function createRow(entry, index) {
     var li = document.createElement('li');
 
-    
-
-    if(entry.request.postData && entry.request.postData.text)
-    {
-      console.log('postData, entry',entry)
-    }
 
     var urlDiv = document.createElement('div');
     urlDiv.innerHTML = 'url: ' + entry.request.url;
@@ -242,7 +234,7 @@
     target = "(" +
       target.replace(/([{}()[\]\\.?*+^$|=!:~-])/g, "\\$1")
       + ")";
-    console.log('target: ', target);
+
     var r = new RegExp(target, "igm");
     return string.replace(/(>[^<]+<)/igm, function (a) {
       return a.replace(r, "<span class='hl'>$1</span>");
