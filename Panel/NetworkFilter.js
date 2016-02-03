@@ -18,7 +18,7 @@
     }
 
     return harWithContent.filter(function (entry) {
-      return entry.responseBody.toLowerCase().indexOf(filterText) !== -1;
+      return entry.responseBody && entry.responseBody.toLowerCase().indexOf(filterText) !== -1;
     })
   }
 
