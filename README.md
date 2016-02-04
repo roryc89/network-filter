@@ -10,8 +10,7 @@ Network filter adds a new devtools tab that allows you to filter network respons
 Time saved!
 
 ##  Installation:
-Download the zip of this repo.
-Unzip it.
+Clone or download this repo.
 Drag and drop the folder onto your chrome extensions page (chrome://extensions).
 
 ##  Usage:
