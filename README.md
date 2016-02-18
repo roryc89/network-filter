@@ -1,11 +1,11 @@
 # network-filter
-Network filter tab for chome devtools.
+Network filter tab for chrome devtools.
 
 ![image](https://cloud.githubusercontent.com/assets/39191/13127005/ffd46afa-d581-11e5-8bd2-aa4c1301be05.png)
 
 
 ##  The problem:
-You're recieving a large number of network responses but you only want to to examine one.
+You're receiving a large number of network responses but you only want to to examine one.
 Chrome doesn't let you filter network responses by text content so you end up wasting time looking at many to find the one you want.
 
 ##  The solution:
