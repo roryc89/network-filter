@@ -46,17 +46,7 @@
     var max = document.getElementById('max').value;
 
     return contentFiltered.filter(function (entry) {
-
-      if (min && min > entry.responseBody.length) {
-        return false
-      }
-      else if (max && max < entry.responseBody.length) {
-        return false;
-      }
-      else {
-        return true;
-      }
-
+      return  !((min && min > entry.responseBody.length) || (max && max < entry.responseBody.length));
     })
   }
 
@@ -66,7 +56,7 @@
 
       if (!harWithContent[index]) {
 
-        entry.getContent(function (content, encoding) {
+        entry.getContent(function (content) {
 
 
           entry.responseBody = content;
@@ -147,7 +137,7 @@
     if (otherHighlightTarget && otherHighlightTarget.length > 2 && document.getElementById('highlight').checked) {
       if(entry.request.postData && entry.request.postData.text)
       {
-        postDataHighlight = highlight(entry.request.postData.text, otherHighlightTarget)
+        postDataHighlight = highlight(entry.request.postData.text, otherHighlightTarget);
         postDataDiv.innerHTML = 'postData high: ' + postDataHighlight;
       }
     }
