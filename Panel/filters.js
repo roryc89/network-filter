@@ -45,7 +45,10 @@
     var max = document.getElementById('max').value;
 
     return contentFiltered.filter(function (entry) {
-      return  !((min && min > entry.responseBody.length) || (max && max < entry.responseBody.length));
+      return  !(
+      (min && entry.responseBody && min > entry.responseBody.length) ||
+      (max && entry.responseBody && max < entry.responseBody.length)
+      );
     })
   }
 })();
