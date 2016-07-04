@@ -37,10 +37,10 @@
     var responseBodyDiv = document.createElement('div');
     var responseBody;
     if (document.getElementById('pretty').checked) {
-      responseBody = '<code>' + syntaxHighlight(entry.responseBody) + '</code>';
+      responseBody = document.createTextNode(syntaxHighlight(entry.responseBody));
     }
     else {
-      responseBody = '<code>'  + entry.responseBody+ '</code>';
+      responseBody = document.createTextNode(entry.responseBody);
     }
 
     responseBodyDiv.innerHTML = 'Response Body: ';
@@ -64,7 +64,7 @@
     }
 
 
-    responseBodyValueSpan.innerHTML = responseBody;
+    responseBodyValueSpan.appendChild(responseBody);
     responseBodyDiv.appendChild(responseBodyValueSpan);
 
     responseBodyValueSpan.onclick = function () {
