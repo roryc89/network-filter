@@ -37,7 +37,7 @@
     var responseBodyDiv = document.createElement('div');
     var responseBody;
     if (document.getElementById('pretty').checked) {
-      responseBody = '<pre><code>' + syntaxHighlight(entry.responseBody) + '</pre></code>';
+      responseBody = '<code>' + syntaxHighlight(entry.responseBody) + '</code>';
     }
     else {
       responseBody = '<code>'  + entry.responseBody+ '</code>';
