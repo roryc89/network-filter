@@ -4,10 +4,19 @@
   nfGlobal.updateUI = function(entries) {
 
     var rowContainer = document.querySelector('.network-entries');
-    rowContainer.innerHTML = '';
-    entries.forEach(function (entry, index) {
-      rowContainer.appendChild(createRow(entry, index));
-    });
+    rowContainer.innerHTML = 'Getting Data';
+
+    setTimeout(()=>{
+
+      var tempFragment = document.createDocumentFragment();
+      entries.forEach(function (entry, index) {
+        tempFragment.appendChild(createRow(entry, index));
+      });
+      rowContainer.innerHTML = '';
+      rowContainer.appendChild(tempFragment);
+
+    },0)
+
   };
 
   function createRow(entry, index) {
