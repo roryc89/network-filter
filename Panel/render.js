@@ -42,7 +42,14 @@
     }
 
     var responseBodyDiv = document.createElement('div');
-    var responseBody = document.createTextNode(entry.responseBody);
+
+    var responseBody;
+    if(entry.response.content.mimeType === 'application/json'){
+      responseBody = document.createElement('pre');
+      responseBody.innerHTML = entry.responseBody;
+    }else{
+      responseBody = document.createTextNode(entry.responseBody);
+    }
 
     responseBodyDiv.innerHTML = '<strong>Response Body</strong>: ';
     var responseBodyValueSpan = document.createElement('span');
