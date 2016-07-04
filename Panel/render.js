@@ -44,7 +44,7 @@
     var responseBodyDiv = document.createElement('div');
     var responseBody = document.createTextNode(entry.responseBody);
 
-    responseBodyDiv.innerHTML = 'Response Body: ';
+    responseBodyDiv.innerHTML = '<strong>Response Body</strong>: ';
     var responseBodyValueSpan = document.createElement('span');
     var bodyId = 'resBodyRow' + index;
     responseBodyValueSpan.setAttribute('id', bodyId);
