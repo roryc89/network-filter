@@ -23,22 +23,22 @@
     var li = document.createElement('li');
 
     var urlDiv = document.createElement('div');
-    urlDiv.innerHTML = 'url: ' + entry.request.url;
+    urlDiv.innerHTML = '<strong>url</strong>: ' + entry.request.url;
 
     var mimeTypeDiv = document.createElement('div');
-    mimeTypeDiv.innerHTML = 'mimeType: ' + entry.response.content.mimeType;
+    mimeTypeDiv.innerHTML = '<strong>mimeType</strong>: ' + entry.response.content.mimeType;
 
     var dateTimeDiv = document.createElement('div');
-    dateTimeDiv.innerHTML = 'dateTime: ' + entry.startedDateTime;
+    dateTimeDiv.innerHTML = '<strong>dateTime</strong>: ' + entry.startedDateTime;
 
     var statusDiv = document.createElement('div');
-    statusDiv.innerHTML = 'status: ' + entry.response.status;
+    statusDiv.innerHTML = '<strong>status</strong>: ' + entry.response.status;
 
     var postDataDiv = document.createElement('div');
 
     if(entry.request.postData && entry.request.postData.text)
     {
-      postDataDiv.innerHTML = 'postData: ' + entry.request.postData.text;
+      postDataDiv.innerHTML = '<strong>postData</strong>: ' + entry.request.postData.text;
     }
 
     var responseBodyDiv = document.createElement('div');
