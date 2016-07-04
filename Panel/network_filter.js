@@ -20,6 +20,7 @@
 
         entry.getContent(content => {
           entry.responseBody = content;
+          entry.lowerCaseBody = content ? content.toLowerCase() : '';
           harWithContent[index] = entry;
           resolve();
         })
