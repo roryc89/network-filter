@@ -6,24 +6,29 @@
 
   function getHarContent(HarLog) {
 
-    HarLog.entries.forEach(function (entry, index) {
+    Promise.all(HarLog.entries.map(promisedGetContent))
+      .then(() => {
+        nfGlobal.filterHar(harWithContent);
+      });
+  }
 
-      if (!harWithContent[index]) {
+  function promisedGetContent(entry, index){
 
-        entry.getContent(function (content) {
+    return new Promise((resolve) => {
 
+      if(!harWithContent[index]){
 
+        entry.getContent(content => {
           entry.responseBody = content;
+          harWithContent[index] = entry;
+          resolve();
+        })
 
-          harWithContent.push(entry);
-
-          if (HarLog.entries.length >= harWithContent.length) {
-
-            nfGlobal.filterHar(harWithContent);
-          }
-        });
+      }else{
+        resolve();
       }
-    });
+
+    })
   }
 
   function getNetwork() {
