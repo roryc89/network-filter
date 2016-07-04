@@ -40,10 +40,7 @@
     var getNetworkButton = document.querySelector('.get-network');
     getNetworkButton.addEventListener('click', getNetwork);
 
-    document.getElementById('filterByContent').onkeyup =
-      document.getElementById('filterByOtherInfo').onkeyup =
-        document.getElementById('max').onkeyup =
-          document.getElementById('min').onkeyup = filterHar;
+    document.getElementById('apply-filters').addEventListener('click', filterHar);
   }
 
   function filterHar(){
