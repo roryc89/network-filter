@@ -42,8 +42,7 @@
     document.getElementById('filterByContent').onkeyup =
       document.getElementById('filterByOtherInfo').onkeyup =
         document.getElementById('max').onkeyup =
-          document.getElementById('min').onkeyup =
-            document.getElementById('pretty').onchange = filterHar;
+          document.getElementById('min').onkeyup = filterHar;
   }
 
   function filterHar(){
